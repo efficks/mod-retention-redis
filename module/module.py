@@ -62,8 +62,8 @@ class Redis_retention_scheduler(BaseModule):
     def __init__(self, modconf, server, port, db):
         BaseModule.__init__(self, modconf)
         self.server = server
-		self.port = port
-		self.db = db
+        self.port = port
+        self.db = db
 
     def init(self):
         """
