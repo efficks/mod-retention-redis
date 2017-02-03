@@ -51,8 +51,8 @@ def get_instance(plugin):
         logger.error('Missing the module python-redis. Please install it.')
         raise Exception
     server = plugin.server
-	port = plugin.port if hasattr(plugin, 'port') else 6379
-	db = plugin.db if hasattr(plugin, 'db') else 0
+    port = plugin.port if hasattr(plugin, 'port') else 6379
+    db = plugin.db if hasattr(plugin, 'db') else 0
 	
     instance = Redis_retention_scheduler(plugin, server, port, db)
     return instance
